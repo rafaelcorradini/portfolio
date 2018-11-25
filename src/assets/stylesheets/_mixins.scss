@@ -1,0 +1,214 @@
+// colors
+$primary: #3A62B7;
+$secondary: #49C5B6;
+
+
+// Sprites
+@mixin sprite($x, $y) {
+  background: image-url('sprites.jpg') no-repeat $x $y;
+}
+
+// Melhora a renderização da fonte no browser
+// ------------------------------------------
+
+//.bestFont () {
+//  -webkit-font-smoothing: antialiased;
+//     -moz-font-smoothing: antialiased;
+//      -ms-font-smoothing: antialiased;
+//          font-smoothing: antialiased;
+//
+//  -moz-text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+//   -ms-text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+//       text-shadow: 0 0 1px rgba(0, 0, 0, 0.01);
+//
+//  -webkit-text-stroke: 1px transparent;
+//     -moz-text-stroke: 1px transparent;
+//      -ms-text-stroke: 1px transparent;
+//          text-stroke: 1px transparent;
+//}
+//
+//
+//// Clearfix
+//// --------
+//.clearfix {
+//  *zoom: 1;
+//  &:before,
+//  &:after {
+//    display: table;
+//    content: "";
+//    // Fixes Opera/contenteditable bug:
+//    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+//    line-height: 0;
+//  }
+//  &:after {
+//    clear: both;
+//  }
+//}
+//
+//
+//// Gradiente
+//// ---------
+//.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+//  background: @color;
+//  background: -webkit-gradient(linear,
+//                               left bottom,
+//                               left top,
+//                               color-stop(0, @start),
+//                               color-stop(1, @stop));
+//  background: -ms-linear-gradient(bottom,
+//                                  @start,
+//                                  @stop);
+//  background: -moz-linear-gradient(center bottom,
+//                                   @start 0%,
+//                                   @stop 100%);
+//  filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@stop,@start));
+//}
+//
+// Opacity
+@mixin opacity($opacity: 1) {
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  -webkit-opacity: $opacity;
+  opacity: $opacity;
+}
+//
+//// Unselect
+//// Remove a selecao de texto do elemento
+//.unselect () {
+//  -webkit-touch-callout: none;
+//    -webkit-user-select: none;
+//     -khtml-user-select: none;
+//       -moz-user-select: none;
+//        -ms-user-select: none;
+//            user-select: none;
+//}
+//
+//// IE7 inline-block hack
+//// ---------------------
+//.ie7-inline-block() {
+//  *display: inline; /* IE7 inline-block hack */
+//  *zoom: 1;
+//}
+//
+//// Atalhos de tamanho
+//// -------------------------
+//.size(@width, @height) {
+//  width: @width;
+//  height: @height;
+//}
+//
+//// Alinhamento de elementos relativos
+//// -------------------------
+//.centerRelative(@width) {
+//  position:relative;
+//  left:50%;
+//  margin:0 0 0 -@width/2;
+//}
+//
+//// Selection background color
+//// --------------------------
+//.selectionBackground(@background, @color) {
+//  background:@background;
+//  color:@color;
+//}
+//
+// Placeholder background color
+// -----------------------------
+@mixin placeholder($color) {
+ &:-moz-placeholder {
+   color: $color;
+ }
+ &:-ms-input-placeholder {
+   color: $color;
+ }
+ &::-webkit-input-placeholder {
+   color: $color;
+ }
+}
+
+// Border Radius
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+          border-radius: $radius;
+}
+
+// Borda de um único lado
+@mixin border-top-left-radius($radius) {
+  -webkit-border-top-left-radius: $radius;
+      -moz-border-radius-topleft: $radius;
+          border-top-left-radius: $radius;
+}
+@mixin border-top-right-radius($radius) {
+  -webkit-border-top-right-radius: $radius;
+      -moz-border-radius-topright: $radius;
+          border-top-right-radius: $radius;
+}
+@mixin border-bottom-right-radius($radius) {
+  -webkit-border-bottom-right-radius: $radius;
+      -moz-border-radius-bottomright: $radius;
+          border-bottom-right-radius: $radius;
+}
+@mixin border-bottom-left-radius($radius) {
+  -webkit-border-bottom-left-radius: $radius;
+      -moz-border-radius-bottomleft: $radius;
+          border-bottom-left-radius: $radius;
+}
+//
+// Drop shadows
+@mixin box-shadow($shadow) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
+//// Transitions
+//.transition(@transition) {
+//    -webkit-transition: @transition;
+//       -moz-transition: @transition;
+//         -o-transition: @transition;
+//            transition: @transition;
+//}
+
+//// Transformations
+//.rotate(@degrees) {
+//  -webkit-transform: rotate(@degrees);
+//     -moz-transform: rotate(@degrees);
+//      -ms-transform: rotate(@degrees);
+//       -o-transform: rotate(@degrees);
+//          transform: rotate(@degrees);
+//}
+//.scale(@ratio) {
+//  -webkit-transform: scale(@ratio);
+//     -moz-transform: scale(@ratio);
+//      -ms-transform: scale(@ratio);
+//       -o-transform: scale(@ratio);
+//          transform: scale(@ratio);
+//}
+//.translate(@x, @y) {
+//  -webkit-transform: translate(@x, @y);
+//     -moz-transform: translate(@x, @y);
+//      -ms-transform: translate(@x, @y);
+//       -o-transform: translate(@x, @y);
+//          transform: translate(@x, @y);
+//}
+//.skew(@x, @y) {
+//  -webkit-transform: skew(@x, @y);
+//     -moz-transform: skew(@x, @y);
+//      -ms-transform: skew(@x, @y);
+//       -o-transform: skew(@x, @y);
+//          transform: skew(@x, @y);
+//}
+//.translate3d(@x, @y, @z) {
+//  -webkit-transform: translate3d(@x, @y, @z);
+//     -moz-transform: translate3d(@x, @y, @z);
+//       -o-transform: translate3d(@x, @y, @z);
+//          transform: translate3d(@x, @y, @z);
+//}
+//
+@mixin transition($s: .4s) {
+  -webkit-transition: all $s;
+  -moz-transition: all $s;
+  -o-transition: all $s;
+  transition: all $s;
+}
