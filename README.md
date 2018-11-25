@@ -1,6 +1,4 @@
-# portfolio
-
-> This is a portfolio of my work. See this working on: https://rafaelcdacunha.com.br/
+This is a portfolio of my work. See this working on: https://rafaelcdacunha.com.br/
 
 ## Build Setup
 
